@@ -1,7 +1,8 @@
 # Mahjong_Calculator
 The python file is the Mahjong Calculator for Winning Tiles on "Pure Concealed Hand".
 
-For winning rules for general Mahjong, you can refer to https://en.wikipedia.org/wiki/Mahjong#Examples_of_winning_hands
+For winning rules for general Mahjong, you can refer to https://en.wikipedia.org/wiki/Mahjong
+
 For simplicity and ease, some important terms are discribed below:
 1. Tile = Mahjong card 
 2. Suit = The catogory of each tile (Dots/Bamboo/Characters)
@@ -18,6 +19,7 @@ For simplicity and ease, some important terms are discribed below:
 For this program, we assume you want to achieve a winning hand on "Pure Concealed Hand", which means all tiles have the same suit and can combine to any meld. 
 Therefore, we mark each tile only using its rank (i.e. 1-9)
 Now we have 13 tiles on hand and we are waiting for the 14th tile, so this program is used to analyze which rank can lead to a win.
+
 For example,
 If we have [2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6] (Notice that we have assumed all have the same suit, so we do not need to mark the suit):
 the 14th tile can be 1, winning melds are [[2, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
