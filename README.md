@@ -15,9 +15,8 @@ For simplicity and ease, some important terms are discribed below:
 9. Chow = a composition of three consecutive tiles (e.g. [Character 2, Character 3, Character 4])
 10. Win = 14 cards on hand with exactly 1 eye and 4 (Pongs or Chows or Both), in other words, 14=2+3+3+3+3
 
-
-For this program, we assume you want to achieve a winning hand on "Pure Concealed Hand", which means all tiles have the same suit and can combine to any meld. 
-Therefore, we mark each tile only using its rank (i.e. 1-9)
+We assume you want to achieve a winning hand on "Pure Concealed Hand". 
+Therefore, we mark each tile only using its rank (i.e. 1-9), since pure means all tiles have the same suit.
 Now you have 13 tiles on hand and we are waiting for the 14th tile, so this program is used to analyze which rank can lead to a win.
 
 For example,
@@ -58,5 +57,5 @@ Developed by Haofeng Jiang
 4. 第14张牌可以是 6, 胡牌组合为 [[3, 3], [2, 2, 2], [2, 3, 4], [4, 5, 6], [4, 5, 6]]
 5. 第14张牌可以是 7, 胡牌组合为 [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [5, 6, 7]]
 
-开发者：蒋浩锋
+开发者：蒋浩锋\n
 2021/08/27
