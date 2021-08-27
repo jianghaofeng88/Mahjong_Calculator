@@ -22,9 +22,9 @@ Now we have 13 tiles on hand and we are waiting for the 14th tile, so this progr
 
 For example,
 If we have [2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6] (Notice that we have assumed all have the same suit, so we do not need to mark the suit):
-the 14th tile can be 1, winning melds are [[2, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-the 14th tile can be 3, winning melds are [[3, 3], [2, 2, 2], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-the 14th tile can be 4, winning melds are [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-the 14th tile can be 6, winning melds are [[3, 3], [2, 2, 2], [2, 3, 4], [4, 5, 6], [4, 5, 6]]
-the 14th tile can be 7, winning melds are [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [5, 6, 7]]
+1. The 14th tile can be 1, winning melds are [[2, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+2. The 14th tile can be 3, winning melds are [[3, 3], [2, 2, 2], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+3. The 14th tile can be 4, winning melds are [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+4. The 14th tile can be 6, winning melds are [[3, 3], [2, 2, 2], [2, 3, 4], [4, 5, 6], [4, 5, 6]]
+5. The 14th tile can be 7, winning melds are [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [5, 6, 7]]
 
