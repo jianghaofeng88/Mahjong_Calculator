@@ -5,7 +5,7 @@ Below is the simple introduction of how the program works. For detailed info rel
 
 Input: 13 integers (from 1 to 9 inclusive）
 
-Output: The 14th integer which will make all 14 integers be able to split into exactly 1 pair and 4 triplets (In other words, 14=2+3+3+3+3). 
+Output: The 14th integer which will make all 14 integers be able to split into 1 valid pair and 4 valid triplets (In other words, 14=2+3+3+3+3). 
 
 Reqiurements:
 1. The pair must be two identical integers. (E.g. [1,1], [3,3], [6,6]).
@@ -34,7 +34,7 @@ Developed by Haofeng Jiang
 
 输入：13个整数（必须为1-9之间的整数）
 
-输出：第14个整数使得这14个数可以刚好分成1个对子和4个三数小组（即14=2+3+3+3+3）。
+输出：第14个整数使得这14个数可以刚好分成符合下述要求的1个对子和4个三数小组（即14=2+3+3+3+3）。
 
 要求：
 1. 对子必须是2个相同的数。（例如 [1,1], [3,3], [6,6]）
