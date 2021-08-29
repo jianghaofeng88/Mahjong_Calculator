@@ -1,31 +1,25 @@
 # Mahjong_Calculator
 The python file is the Mahjong Calculator for Winning Tiles on "Pure Concealed Hand".
 
-For winning rules for general Mahjong, you can refer to https://en.wikipedia.org/wiki/Mahjong
+Below is the simple introduction of how the program works. For detailed info related to Mahjong game, please refer to detail_info.txt.
 
-For simplicity and ease, some important terms are discribed below:
-1. Tile = Mahjong card 
-2. Suit = The catogory of each tile (Dots/Bamboo/Characters)
-3. Rank = The point of each tile (1 to 9)
-4. Pure hand = All tiles on hand have the same suit
-5. Concealed hand = All tiles on hand can be composed to any meld(s) whatever you want
-6. Meld = a composition of tiles on hand (inclusing eye, pong and chow)
-7. Eye = a pair of two identical tiles (e.g. [Dot 1, Dot 1], [Bamboo 4, Bamboo 4])
-8. Pong = a composition of three identical tiles (e.g. [Character 2, Character 2, Character 2]) 
-9. Chow = a composition of three consecutive tiles (e.g. [Character 2, Character 3, Character 4])
-10. Win = 14 cards on hand with exactly 1 eye and 4 (Pongs or Chows or Both), in other words, 14=2+3+3+3+3
+Input: 13 integers (from 1 to 9 inclusive）
 
-We assume you want to achieve a winning hand on "Pure Concealed Hand". 
-Therefore, we mark each tile only using its rank (i.e. 1-9), since pure means all tiles have the same suit.
-Now you have 13 tiles on hand and we are waiting for the 14th tile, so this program is used to analyze which rank can lead to a win.
+Output: The 14th integer which will make all 14 integers be able to split into exactly 1 pair and 4 triplets (In other words, 14=2+3+3+3+3). 
+
+Reqiurements:
+1. The pair must be two identical integers. (E.g. [1,1], [3,3], [6,6]).
+2. The triplet must be either three identical integers or three consecutive integers. (E.g. [2,2,2], [2,3,4], [3,4,5], [8,8,8], [7,8,9]).
+3. All individual integer can appear at most 4 times (i.e. we do not allow the same integer appear 5 times or more). For example, if there have been already four "2"s in the input, the program will not output "2". 
+4. Output all possible integers from 1 to 9 inclusive.
 
 For example,
-If we have [2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6] (Notice that we have assumed all have the same suit, so we do not need to mark the suit):
-1. The 14th tile can be 1, winning melds are [[2, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-2. The 14th tile can be 3, winning melds are [[3, 3], [2, 2, 2], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-3. The 14th tile can be 4, winning melds are [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-4. The 14th tile can be 6, winning melds are [[3, 3], [2, 2, 2], [2, 3, 4], [4, 5, 6], [4, 5, 6]]
-5. The 14th tile can be 7, winning melds are [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [5, 6, 7]]
+If we have [2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6],
+1. The output integer can be 1, valid splits are [[2, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+2. The output integer can be 3, valid splits are [[3, 3], [2, 2, 2], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+3. The output integer can be 4, valid splits are [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+4. The output integer can be 6, valid splits are [[3, 3], [2, 2, 2], [2, 3, 4], [4, 5, 6], [4, 5, 6]]
+5. The output integer can be 7, valid splits are [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [5, 6, 7]]
 
 Developed by Haofeng Jiang
 
@@ -35,30 +29,24 @@ Developed by Haofeng Jiang
 
 
 本python程序用于计算麻将门前清清一色的听牌。
-麻将详细介绍请参阅 https://zh.wikipedia.org/wiki/麻将
 
-为了便于理解，以下为一些麻将术语的简单解释：
-1. 麻将牌 = 打麻将使用的牌
-2. 花色 = 麻将牌的种类，这里我们只考虑万、条、筒
-3. 点数 = 麻将牌上的点数，这里我们只考虑1-9
-4. 清一色 = 每张手牌的花色相同
-5. 门前清 = 手牌可以任意组合
-6. 组 = 两张或三张麻将牌的组合
-7. 雀头 = 一组两张完全一样的牌（如【一筒，一筒】，【四条，四条】）
-8. 刻子 = 一组三张完全一样的牌（如【二万，二万，二万】）
-9. 顺子 = 一组三张连续的牌（如【二万，三万，四万】）
-10. 胡牌 = 手上14张牌刚好可以组成1个雀头和4个（刻子或顺子），即14=2+3+3+3+3
+以下为本程序用法的简单介绍，如果想详细了解如何应用于麻将，请参阅detailed_info.txt。
 
-假设你想要做成门前清的清一色胡牌，所以在本程序里，所有的麻将牌只用点数代表（因为清一色代表花色相同）。
-现在你手上有13张牌，正在等着第14张牌（即听牌），那么本程序可以告诉你哪张牌可以让你胡牌。
+输入：13个整数（必须为1-9之间的整数）
+输出：第14个整数使得这14个数可以刚好分成1个对子和4个三数小组（即14=2+3+3+3+3）。
+要求：
+1. 对子必须是2个相同的数。（例如 [1,1], [3,3], [6,6]）
+2. 三数小组必须是3个相同的数或者3个连续的数。（例如 [2,2,2], [2,3,4], [3,4,5], [8,8,8], [7,8,9]）
+3. 每个数只能最多出现4次（即不能出现5个一样的数），比方说如果已经输入了四个2，则程序不会输出2。
+4. 本程序会输出1-9之间所有符合条件的整数。
 
 例如：
-如果我们手牌是[2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6] （注意我们已经假设所有花色相同了，所以就不写花色只写点数）：
-1. 第14张牌可以是 1, 胡牌组合为 [[2, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-2. 第14张牌可以是 3, 胡牌组合为 [[3, 3], [2, 2, 2], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-3. 第14张牌可以是 4, 胡牌组合为 [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-4. 第14张牌可以是 6, 胡牌组合为 [[3, 3], [2, 2, 2], [2, 3, 4], [4, 5, 6], [4, 5, 6]]
-5. 第14张牌可以是 7, 胡牌组合为 [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [5, 6, 7]]
+如果我们输入[2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 6]，
+1. 输出可以是 1, 把14个数分成 [[2, 2], [1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+2. 输出可以是 3, 把14个数分成 [[3, 3], [2, 2, 2], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+3. 输出可以是 4, 把14个数分成 [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
+4. 输出可以是 6, 把14个数分成 [[3, 3], [2, 2, 2], [2, 3, 4], [4, 5, 6], [4, 5, 6]]
+5. 输出可以是 7, 把14个数分成 [[2, 2], [2, 3, 4], [2, 3, 4], [3, 4, 5], [5, 6, 7]]
 
 开发者：蒋浩锋
 
