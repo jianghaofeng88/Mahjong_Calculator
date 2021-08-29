@@ -30,7 +30,7 @@ Developed by Haofeng Jiang
 
 本python程序用于计算麻将门前清清一色的听牌。
 
-以下为本程序用法的简单介绍，如果想详细了解如何应用于麻将，请参阅detailed_info.txt。
+以下为本程序用法的简单介绍，如果想详细了解如何应用于麻将，请参阅detail_info.txt。
 
 输入：13个整数（必须为1-9之间的整数）
 
