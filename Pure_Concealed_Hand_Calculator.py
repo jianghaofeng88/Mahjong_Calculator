@@ -63,8 +63,7 @@ def ting(hand):
 
 if __name__ == '__main__':
     print("Mahjong Calculator for Winning Tiles on Pure Concealed Hand")
-    print("麻将门清清一色听牌计算器")
-    print("Developed by Haofeng Jiang\n开发者：蒋浩锋\n2021/08/27\n")
+    print("Developed by Haofeng Jiang\n2021/08/27\n")
 
     next_or_exit = ""
     while (next_or_exit != "exit"):
